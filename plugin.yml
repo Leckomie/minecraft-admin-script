@@ -1,0 +1,172 @@
+name: AdminCore
+version: 1.0.0
+main: de.leckomie.admincore.AdminCore
+api-version: 1.20
+description: Vollständiges Admin-Plugin mit GameMode, Flight, Vanish, Teleport und Rank System
+authors: [Leckomie]
+
+commands:
+  gmc:
+    description: Setzt den Spielmodus auf Creative
+    usage: /gmc
+    permission: admincore.use
+  gms:
+    description: Setzt den Spielmodus auf Survival
+    usage: /gms
+    permission: admincore.use
+  gmsp:
+    description: Setzt den Spielmodus auf Spectator
+    usage: /gmsp
+    permission: admincore.use
+  gma:
+    description: Setzt den Spielmodus auf Adventure
+    usage: /gma
+    permission: admincore.use
+  fly:
+    description: Schaltet Flight-Modus mit GodMode um
+    usage: /fly [Spieler]
+    permission: admincore.fly
+  godmode:
+    description: GodMode Alias für /fly
+    usage: /godmode [Spieler]
+    permission: admincore.fly
+  v:
+    description: Vanish umschalten - unsichtbar für andere Spieler
+    usage: /v
+    permission: admincore.vanish
+  vanish:
+    description: Vanish Alias
+    usage: /vanish
+    permission: admincore.vanish
+  tp:
+    description: Teleportiert zu einem Spieler oder zu Koordinaten
+    usage: /tp <Spieler|x y z> oder /tp <Spieler> <ZielSpieler>
+    permission: admincore.tp
+  tphere:
+    description: Teleportiert einen Spieler zu dir - Force TP
+    usage: /tphere <Spieler>
+    permission: admincore.tp
+  tpall:
+    description: Teleportiert alle Spieler zu dir
+    usage: /tpall
+    permission: admincore.tp.admin
+  rank:
+    description: Verwalte Ränge von Spielern
+    usage: /rank give <Spieler> <Rang> | /rank remove <Spieler> <Rang> | /rank list <Spieler>
+    permission: admincore.rank
+  freeze:
+    description: Friert einen Spieler ein
+    usage: /freeze <Spieler>
+    permission: admincore.freeze
+  unfreeze:
+    description: Entfriert einen Spieler
+    usage: /unfreeze <Spieler>
+    permission: admincore.freeze
+  invsee:
+    description: Schau dir das Inventar eines anderen Spielers an
+    usage: /invsee <Spieler>
+    permission: admincore.invsee
+  kick:
+    description: Kickt einen Spieler vom Server
+    usage: /kick <Spieler> [Grund]
+    permission: admincore.kick
+  ban:
+    description: Bannt einen Spieler
+    usage: /ban <Spieler> [Grund]
+    permission: admincore.ban
+  unban:
+    description: Entbannt einen Spieler
+    usage: /unban <Spieler>
+    permission: admincore.ban
+  mute:
+    description: Muted einen Spieler
+    usage: /mute <Spieler> [Dauer in Minuten]
+    permission: admincore.mute
+  unmute:
+    description: Unmuted einen Spieler
+    usage: /unmute <Spieler>
+    permission: admincore.mute
+  heal:
+    description: Heilt einen Spieler
+    usage: /heal [Spieler]
+    permission: admincore.heal
+  feed:
+    description: Füllt den Hunger eines Spielers
+    usage: /feed [Spieler]
+    permission: admincore.feed
+  give:
+    description: Gibt einem Spieler Items
+    usage: /give <Spieler> <Item> [Menge]
+    permission: admincore.give
+  clearinv:
+    description: Leert das Inventar eines Spielers
+    usage: /clearinv [Spieler]
+    permission: admincore.clearinv
+  speed:
+    description: Stellt die Bewegungsgeschwindigkeit ein
+    usage: /speed <Spieler> <1-10>
+    permission: admincore.speed
+  broadcast:
+    description: Sendet eine Nachricht an alle Spieler
+    usage: /broadcast <Nachricht>
+    permission: admincore.broadcast
+  staffchat:
+    description: Schreibt in den Staff-Chat
+    usage: /staffchat <Nachricht>
+    permission: admincore.staffchat
+
+permissions:
+  admincore.use:
+    description: Nutze GameMode Befehle
+    default: op
+  admincore.fly:
+    description: Nutze Flight und GodMode
+    default: op
+  admincore.vanish:
+    description: Nutze Vanish
+    default: op
+  admincore.tp:
+    description: Nutze Teleport Befehle
+    default: op
+  admincore.tp.admin:
+    description: Nutze /tpall
+    default: op
+  admincore.rank:
+    description: Verwalte Ränge
+    default: op
+  admincore.freeze:
+    description: Friere Spieler ein
+    default: op
+  admincore.invsee:
+    description: Schau dir Inventare an
+    default: op
+  admincore.kick:
+    description: Kicke Spieler
+    default: op
+  admincore.ban:
+    description: Banne Spieler
+    default: op
+  admincore.mute:
+    description: Mute Spieler
+    default: op
+  admincore.heal:
+    description: Heile Spieler
+    default: op
+  admincore.feed:
+    description: Füttere Spieler
+    default: op
+  admincore.give:
+    description: Gebe Items
+    default: op
+  admincore.clearinv:
+    description: Leere Inventare
+    default: op
+  admincore.speed:
+    description: Ändere Bewegungsgeschwindigkeit
+    default: op
+  admincore.broadcast:
+    description: Sende Broadcasts
+    default: op
+  admincore.staffchat:
+    description: Nutze Staff-Chat
+    default: op
